@@ -1,0 +1,27 @@
+name: React
+
+
+on:
+  push:
+    branches: [ "main" ]
+
+
+    tags:
+      - "v*"
+  pull_request:
+    branches: [ "main" ]
+ 
+    
+
+jobs:
+      
+      
+      
+  docker:
+
+    runs-on: ubuntu-latest
+    steps:
+        - name: docker build
+          run: docker build . --file Dockerfile --tag bs2frontend:latest
+        
+  

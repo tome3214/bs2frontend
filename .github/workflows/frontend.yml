@@ -1,6 +1,7 @@
 name: React
 
 
+
 on:
   push:
     branches: [ "main" ]
@@ -18,10 +19,12 @@ jobs:
       
       
   docker:
+  
 
     runs-on: ubuntu-latest
     steps:
-        - name: docker build
-          run: docker build . --file Dockerfile --tag bs2frontend:latest
+       - uses: actions/checkout@v2
+       - name: docker build
+         run: docker build . --file Dockerfile --tag bs2frontend:latest
         
   

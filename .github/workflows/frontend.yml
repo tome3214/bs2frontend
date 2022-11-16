@@ -39,7 +39,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{secrets.DOCKER_USERNAME}}/github:latest
+          tags: ${{secrets.DOCKER_USERNAME}}/bs2frontend:latest
          
          
   webhook:
